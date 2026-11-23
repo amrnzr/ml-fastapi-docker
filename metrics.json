@@ -1,0 +1,50 @@
+{
+  "dataset": "IBM Telco Customer Churn (7043 customers)",
+  "selected_model": "GradientBoosting",
+  "selection_metric": "roc_auc on stratified 20% hold-out",
+  "test_metrics": {
+    "LogisticRegression": {
+      "accuracy": 0.7367,
+      "f1_churn": 0.6123,
+      "roc_auc": 0.8415
+    },
+    "RandomForest": {
+      "accuracy": 0.7651,
+      "f1_churn": 0.639,
+      "roc_auc": 0.842
+    },
+    "GradientBoosting": {
+      "accuracy": 0.802,
+      "f1_churn": 0.583,
+      "roc_auc": 0.8433
+    }
+  },
+  "features": [
+    "tenure",
+    "MonthlyCharges",
+    "TotalCharges",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod"
+  ],
+  "dropped_columns": [
+    "customerID",
+    "gender"
+  ],
+  "classes": {
+    "0": "stay",
+    "1": "churn"
+  }
+}
