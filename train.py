@@ -25,7 +25,6 @@ METRICS_PATH = BASE_DIR / "metrics.json"
 RANDOM_STATE = 42
 TARGET = "Churn"
 
-# customerID is an identifier, gender is a sensitive attribute: both are not used by the model.
 DROPPED = ["customerID", "gender"]
 
 NUMERIC_FEATURES = ["tenure", "MonthlyCharges", "TotalCharges"]
@@ -94,7 +93,6 @@ def main() -> None:
         if res["roc_auc"] > best_auc:
             best_name, best_auc = name, res["roc_auc"]
 
-    # Refit the selected model on all data before saving it as the deployment artifact.
     final_model = build_pipeline(candidates[best_name]).fit(X, y)
     joblib.dump(final_model, MODEL_PATH)
 
