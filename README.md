@@ -22,17 +22,17 @@ customers with `tenure = 0`; it is converted to a number and the gap is filled b
 
 ```
 ml-fastapi-docker/
-├── main.py              # FastAPI app: GET / and POST /predict
-├── train.py             # trains the model and saves model.joblib
-├── model.joblib         # trained model artifact (sklearn Pipeline)
-├── metrics.json         # hold-out metrics written by train.py
-├── requirements.txt     # runtime dependencies (used by Docker)
-├── requirements-dev.txt # + pytest/httpx for the tests
+├── main.py            
+├── train.py          
+├── model.joblib       
+├── metrics.json 
+├── requirements.txt  
+├── requirements-dev.txt 
 ├── Dockerfile
 ├── .dockerignore
 ├── data/telco_customer_churn.csv
-├── tests/test_api.py    # API tests
-├── screenshots/         # Swagger UI tested against the running container
+├── tests/test_api.py 
+├── screenshots/  
 └── README.md
 ```
 
