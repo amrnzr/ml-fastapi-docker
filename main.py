@@ -16,7 +16,6 @@ ml_model = {}
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Load the trained model artifact once, when the service starts.
     if not MODEL_PATH.exists():
         raise RuntimeError(f"{MODEL_PATH.name} not found. Run `python train.py` first.")
     ml_model["pipeline"] = joblib.load(MODEL_PATH)
