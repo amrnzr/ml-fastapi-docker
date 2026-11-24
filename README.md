@@ -1,7 +1,5 @@
 # ML model deployment with FastAPI and Docker
 
-Practical Task 6, Machine Learning course.
-
 A customer-churn classifier is trained on the **IBM Telco Customer Churn** dataset, saved as `model.joblib`,
 served by a **FastAPI** app and packaged in a **Docker** container.
 
